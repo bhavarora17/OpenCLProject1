@@ -1,0 +1,12 @@
+.PHONY: EnumerateVMat.cs
+
+all: run
+
+test.exe: EnumerateVMat.cs
+	@mcs EnumerateVMat.cs EnumerateVMat
+
+clean:
+	@rm -f EnumerateVMat.exe
+
+run: EnumerateVMat.exe
+	@mono EnumerateVMat.exe
